@@ -8,7 +8,7 @@ class GlobalService
     public static function checkAddedFile(){
         $dbfiles = Filename::pluck('name')->toArray();
 
-        $filepath = base_path('public\files');
+        $filepath = base_path('public/files');
         $dirfiles = array_diff(scandir($filepath), array('.', '..'));
         
         $added = false;
